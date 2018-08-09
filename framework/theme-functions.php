@@ -3,7 +3,14 @@
  * @package nevler, Copyright Rohit Tripathi, rohitink.com
  * This file contains Custom Theme Related Functions.
  */
- 
+
+//Import Admin Modules
+require get_template_directory() . '/framework/admin_modules/register_styles.php';
+require get_template_directory() . '/framework/admin_modules/register_widgets.php';
+require get_template_directory() . '/framework/admin_modules/theme_setup.php';
+require get_template_directory() . '/framework/admin_modules/admin_styles.php';
+require get_template_directory() . '/framework/admin_modules/logo_compatibility.php';
+
 /*
 ** Walkers for Navigation menus
 */ 
@@ -16,50 +23,19 @@ function nevler_pagination() {
 	the_posts_pagination( array( 'mid_size' => 2 ) );
 }
 
-/*
-** Customizer Controls 
-*/
-if (class_exists('WP_Customize_Control')) {
-	class Nevler_WP_Customize_Category_Control extends WP_Customize_Control {
-        /**
-         * Render the control's content.
-         */
-        public function render_content() {
-            $dropdown = wp_dropdown_categories(
-                array(
-                    'name'              => '_customize-dropdown-categories-' . $this->id,
-                    'echo'              => 0,
-                    'show_option_none'  => __( '&mdash; Select &mdash;', 'nevler' ),
-                    'option_none_value' => '0',
-                    'selected'          => $this->value(),
-                )
-            );
- 
-            $dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
- 
-            printf(
-                '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>',
-                $this->label,
-                $dropdown
-            );
-        }
-    }
-}  
 
-if (class_exists('WP_Customize_Control')) {
-	class WP_Customize_Upgrade_Control extends WP_Customize_Control {
-        /**
-         * Render the control's content.
-         */
-        public function render_content() {
-             printf(
-                '<label class="customize-control-upgrade"><span class="customize-control-title">%s</span> %s</label>',
-                $this->label,
-                $this->description
-            );
-        }
-    }
+/*
+ * Function to Trim Excerpt Length & more..
+ */
+function nevler_excerpt_length( $length ) {
+    return 23;
 }
+add_filter( 'excerpt_length', 'nevler_excerpt_length', 999 );
+
+function nevler_excerpt_more( $more ) {
+    return '&hellip;';
+}
+add_filter( 'excerpt_more', 'nevler_excerpt_more' );
   
 /*
 ** Function to check if Sidebar is enabled on Current Page 

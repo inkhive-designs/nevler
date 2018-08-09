@@ -14,7 +14,7 @@
 					foreach ( $lastposts as $post ) :
 					  setup_postdata( $post ); ?>
 				
-				    <div class="col-md-3 col-sm-6 col-xs-6 imgcontainer">
+				    <div class="col-md-3 col-sm-6 col-xs-12 imgcontainer">
 				    	<div class="popimage">
 				        <?php if (has_post_thumbnail()) : ?>	
 								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('nevler-pop-thumb'); ?></a>

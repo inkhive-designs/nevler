@@ -32,6 +32,15 @@ function nevler_custom_header_setup() {
 		'admin-head-callback'    => 'nevler_admin_header_style',
 		'admin-preview-callback' => 'nevler_admin_header_image',
 	) ) );
+    //default header image
+    register_default_headers( array(
+            'default-image'    => array(
+                'url'            => '%s/assets/images/header.jpg',
+                'thumbnail_url'    => '%s/assets/images/header.jpg',
+                'description'    => __('Default Header Image', 'nevler')
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'nevler_custom_header_setup' );
 

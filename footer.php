@@ -23,9 +23,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<?php printf( __( 'Powered by %1$s.', 'nevler' ), '<a href="'.esc_url("https://rohitink.com/2016/11/26/nevler-mini-magazine-responsive-theme/").'" rel="nofollow">Nevler</a>' ); ?>
+			<span class="credit-line">
+                <?php printf( __( 'Powered by %1$s.', 'nevler' ), '<a href="'.esc_url("https://rohitink.com/2016/11/26/nevler-mini-magazine-responsive-theme/").'" rel="nofollow">Nevler</a>' ); ?>
+            </span>
 			<span class="sep"></span>
-			<?php echo ( get_theme_mod('nevler_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','nevler')) : esc_html( get_theme_mod('nevler_footer_text') ); ?>
+            <span class="footer-text">
+                <?php echo ( get_theme_mod('nevler_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','nevler')) : esc_html( get_theme_mod('nevler_footer_text') ); ?>
+            </span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	
