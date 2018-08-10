@@ -112,7 +112,9 @@ function nevler_customize_register_layouts($wp_customize) {
         'nevler_sidebar_width',
         array(
             'default' => 4,
-            'sanitize_callback' => 'nevler_sanitize_positive_number' )
+            'sanitize_callback' => 'nevler_sanitize_positive_number',
+            'transport' => 'postMessage'
+        )
     );
 
     $wp_customize->add_control(
@@ -153,7 +155,7 @@ function nevler_customize_register_layouts($wp_customize) {
     $wp_customize->add_setting(
         'nevler_fc_line_disable',
         array(
-            'sanitize_callback' => 'nevler sanitize_checkbox',
+            'sanitize_callback' => 'nevler_sanitize_checkbox',
             'transport' => 'postMessage'
         )
     );

@@ -62,6 +62,10 @@ function nevler_custom_css_mods() {
 	if ( get_theme_mod('nevler_hide_title_tagline') ) :
 		echo "#masthead .site-branding #text-title-desc { display: none; }";
 	endif;
+
+	if ( get_theme_mod('nevler_fc_line_disable', true)) :
+        echo "#colophon .credit-line { display: none; }";
+	endif;
 	
 
 	echo "</style>";

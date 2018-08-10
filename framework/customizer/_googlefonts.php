@@ -9,7 +9,7 @@ function nevler_customize_register_googlefonts($wp_customize) {
         )
     );
 
-    $font_array = array('Lato','Roboto Condensed','Open Sans','Oswald','Slabo','Lora');
+    $font_array = array('Lato','Roboto Condensed','Open Sans','Oswald','Slabo 13px','Lora');
     $fonts = array_combine($font_array, $font_array);
 
     $wp_customize->add_setting(
@@ -22,7 +22,7 @@ function nevler_customize_register_googlefonts($wp_customize) {
     );
 
     function nevler_sanitize_gfont( $input ) {
-        if ( in_array($input, array('Lato','Roboto Condensed','Open Sans','Oswald','Slabo','Lora') ) )
+        if ( in_array($input, array('Lato','Roboto Condensed','Open Sans','Oswald','Slabo 13px','Lora') ) )
             return $input;
         else
             return '';

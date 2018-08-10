@@ -160,4 +160,14 @@
             $( 'body' ).css( 'font-family', to );
         } );
     } );
+
+    //Sidebar
+    wp.customize( 'nevler_sidebar_width', function( value ) {
+        value.bind( function( to ) {
+            var SidebarWidth    =   (to * 100) / 12;
+            $('#secondary').css('width', SidebarWidth + '%' );
+            $('#primary, #primary-mono').css('width', 100 - SidebarWidth + '%' );
+        } );
+    } );
+
 } )( jQuery );
