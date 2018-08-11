@@ -3,7 +3,7 @@ function nevler_customize_register_header($wp_customize) {
     $wp_customize->get_section('header_image')->panel = 'nevler_header_panel';
 
     $wp_customize->add_panel('nevler_header_panel', array(
-            'title' => __('Header Settings', 'oxane'),
+            'title' => __('Header Settings', 'nevler'),
             'priority' => 20,
         )
     );

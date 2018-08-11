@@ -1,1 +1,37 @@
-.customize-pane-parent>li#accordion-section-nevler_sec_pro h3:before{content:"\f05a";font-family:"FontAwesome"}.nevler-important-links{background:#009ee2;padding:5px 10px;color:#FFF!important;text-align:center;display:block;margin-top:5px;line-height:1.2;-webkit-box-shadow:none;box-shadow:none;font-style:normal;text-decoration:none}.nevler-important-links:hover{background:#006995}
+/* Globals */
+/* ----------------
+Important Links
+ -----------------*/
+/* Customizer Icon Styles */
+.customize-pane-parent > li#accordion-section-nevler_sec_pro h3:before {
+  content: "\f05a";
+  font-family: "FontAwesome";
+}
+.nevler-important-links {
+  background: #009ee2;
+  padding: 5px 10px;
+  color: #FFF !important;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  line-height: 1.2;
+  box-shadow: none;
+  font-style: normal;
+  text-decoration: none;
+}
+.nevler-important-links:hover {
+  background: #006995;
+}
+.cta-pro {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: .04em;
+}
+.cta-pro span {
+  padding-top: 3px;
+  color: #009ee2;
+}
+.cta-pro a {
+  padding-right: 13px !important;
+}

@@ -43,7 +43,7 @@ function nevler_custom_css_mods() {
 	
 	
 	if ( get_theme_mod('nevler_title_font') ) :
-		echo ".title-font, h1, h2, .section-title { font-family: ".esc_html(get_theme_mod('nevler_title_font','Roboto Condensed'))."; }";
+		echo ".title-font, h1, h2, .section-title { font-family: '".esc_html(get_theme_mod('nevler_title_font','Roboto Condensed'))."'; }";
 	endif;
 	
 	if ( get_theme_mod('nevler_body_font') ) :
